@@ -3,32 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Japan Travel Planner</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-<h1>Plan Your Japan Trip</h1>
+<header role="banner">
+  <h1>Comp 484</h1>
+  <h2>Plan Your Japan Trip</h2>
+  <nav role="navigation">
+    <ul>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="budget.html">Trip Budget</a></li>
+      <li><a href="travel.html">Travel Planner</a></li>
+      <li><a href="phrases.html">Phrases</a></li>
+    </ul>
+  </nav>
+</header>
 
-<div class="planner">
-  <label>Choose a city to visit:
-    <select id="city">
-      <option value="Tokyo">Tokyo</option>
-      <option value="Kyoto">Kyoto</option>
-      <option value="Osaka">Osaka</option>
-      <option value="Yokohama">Yokohama</option>
-      <option value="Nagoya">Nagoya</option>
-      <option value="Hakone">Hakone</option>
-    </select>
-  </label>
-  <button onclick="addCity()">Add City</button>
-</div>
+<main role="main">
+  <article class="planner-grid">
+    <section class="planner-box">
+      <label>Choose a city to visit:
+        <select id="city">
+          <option value="Tokyo">Tokyo</option>
+          <option value="Kyoto">Kyoto</option>
+          <option value="Osaka">Osaka</option>
+          <option value="Yokohama">Yokohama</option>
+          <option value="Nagoya">Nagoya</option>
+          <option value="Hakone">Hakone</option>
+        </select>
+      </label>
+      <button onclick="addCity()">Add City</button>
+    </section>
 
-<h2>Your Itinerary</h2>
-<ul id="itinerary"></ul>
+    <section class="planner-results">
+      <h3>Your Itinerary</h3>
+      <ul id="itinerary"></ul>
 
-<h2>Total Travel Time</h2>
-<p><span id="travelTime">0</span> hours</p>
+      <h4>Total Travel Time</h4>
+      <p><span id="travelTime">0</span> hours</p>
+    </section>
+  </article>
+</main>
+
+<footer role="contentinfo">
+  <p>&copy; 2026 Japan Travel Planner</p>
+</footer>
 
 </body>
 </html>

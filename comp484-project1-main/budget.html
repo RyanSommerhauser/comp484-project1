@@ -3,72 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>Japan Trip Budget</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-<h1>Japan Trip Budget Calculator</h1>
+<header role="banner">
+  <h1>Comp 484</h1>
+  <h2>Japan Trip Budget Calculator</h2>
+  <nav role="navigation">
+    <ul>
+      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="budget.html">Trip Budget</a></li>
+      <li><a href="travel.html">Travel Planner</a></li>
+      <li><a href="phrases.html">Phrases</a></li>
+    </ul>
+  </nav>
+</header>
 
-<!-- Inputs wrapped in a form -->
-<form id="budgetForm" class="budget-box">
+<main role="main">
+  <article class="budget-grid">
+    <section class="budget-box">
+      <form id="budgetForm">
 
-  <label>
-    Flight cost (round trip):
-    <input type="number" id="flight">
-  </label>
+        <label>
+          Flight cost (round trip):
+          <input type="number" id="flight">
+        </label>
 
-  <label>
-    Housing cost per day:
-    <input type="number" id="housing">
-  </label>
+        <label>
+          Housing cost per day:
+          <input type="number" id="housing">
+        </label>
 
-  <label>
-    Food cost per day:
-    <input type="number" id="food">
-  </label>
+        <label>
+          Food cost per day:
+          <input type="number" id="food">
+        </label>
 
-  <label>
-    Attractions cost per day:
-    <input type="number" id="attractions">
-  </label>
+        <label>
+          Attractions cost per day:
+          <input type="number" id="attractions">
+        </label>
 
-  <label>
-    Number of days:
-    <input type="number" id="days">
-  </label>
+        <label>
+          Number of days:
+          <input type="number" id="days">
+        </label>
 
-  <label>
-    Maximum Budget:
-    <input type="number" id="budgetMax" placeholder="Enter your budget goal">
-  </label>
+        <label>
+          Maximum Budget:
+          <input type="number" id="budgetMax" placeholder="Enter your budget goal">
+        </label>
 
-</form>
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+      </form>
+    </section>
 
-<h2>Total Cost Formula</h2>
-<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
-  <mi>Total</mi>
-  <mo>=</mo>
-  <mi>Flight</mi>
-  <mo>+</mo>
-  <mo>(</mo>
-  <mi>Housing</mi>
-  <mo>+</mo>
-  <mi>Food</mi>
-  <mo>+</mo>
-  <mi>Attractions</mi>
-  <mo>)</mo>
-  <mo>×</mo>
-  <mi>Days</mi>
-</math>
+    <section class="budget-results">
+      <h3>Total Cost Formula</h3>
+      <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+        <mi>Total</mi>
+        <mo>=</mo>
+        <mi>Flight</mi>
+        <mo>+</mo>
+        <mo>(</mo>
+        <mi>Housing</mi>
+        <mo>+</mo>
+        <mi>Food</mi>
+        <mo>+</mo>
+        <mi>Attractions</mi>
+        <mo>)</mo>
+        <mo>×</mo>
+        <mi>Days</mi>
+      </math>
 
-<h2>Calculated Total</h2>
-<p>$<span id="total">0</span></p>
+      <h3>Calculated Total</h3>
+      <p>$<span id="total">0</span></p>
 
-<progress id="budgetProgress" value="0" max="100"></progress>
+      <progress id="budgetProgress" value="0" max="100"></progress>
+    </section>
+  </article>
+</main>
 
-<!-- Button uses 'form' attribute to associate with the form -->
-<button type="button" form="budgetForm" onclick="calculateTotal()">Calculate Total</button>
+<footer role="contentinfo">
+  <p>&copy; 2026 Japan Travel Planner</p>
+</footer>
 
 </body>
 </html>

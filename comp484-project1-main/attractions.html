@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Japan Attractions</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<title>Japan Attractions</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+<header role="banner">
+    <h1>Comp 484</h1>
+    <h2>Japan Attractions</h2>
+    <nav role="navigation">
+    <ul>
+        <li><a href="attractions.html">Attractions</a></li>
+        <li><a href="budget.html">Trip Budget</a></li>
+        <li><a href="travel.html">Travel Planner</a></li>
+        <li><a href="phrases.html">Phrases</a></li>
+    </ul>
+    </nav>
+</header>
 
-<h1>Japan Attractions</h1>
+<main role="main">
+    <article role="article">
+    <section>
+        <p>Explore some of the major cities and attractions in Japan. Click "More Info" to learn more about each location.</p>
+    </section>
 
-<div class="attractions-grid">
+    <section class="attractions-grid">
+        <div class="attraction">
+        <h3>Tokyo</h3>
+        <img src="images/tokyo.jpg" alt="Tokyo" class="attraction-image">
+        <details>
+            <summary>More Info</summary>
+            <p>Modern city, Shibuya crossing, Tokyo Tower, temples, and shopping.</p>
+        </details>
+        </div>
 
-  <div class="attraction">
-    <h3>Tokyo</h3>
-    <img src="images/tokyo.jpg" alt="Tokyo" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Modern city, Shibuya crossing, Tokyo Tower, temples, and shopping.</p>
-    </details>
-  </div>
+        <div class="attraction">
+        <h3>Kyoto</h3>
+        <img src="images/kyoto.jpg" alt="Kyoto" class="attraction-image">
+        <details>
+            <summary>More Info</summary>
+            <p>Traditional culture, temples, gardens, and historic districts.</p>
+        </details>
+        </div>
 
-  <div class="attraction">
-    <h3>Kyoto</h3>
-    <img src="images/kyoto.jpg" alt="Kyoto" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Traditional culture, temples, gardens, and historic districts.</p>
-    </details>
-  </div>
+        <div class="attraction">
+        <h3>Osaka</h3>
+        <img src="images/osaka.jpg" alt="Osaka" class="attraction-image">
+        <details>
+            <summary>More Info</summary>
+            <p>Food capital of Japan, Osaka Castle, Universal Studios.</p>
+        </details>
+        </div>
 
-  <div class="attraction">
-    <h3>Osaka</h3>
-    <img src="images/osaka.jpg" alt="Osaka" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Food capital of Japan, Osaka Castle, Universal Studios.</p>
-    </details>
-  </div>
+        <!-- Placeholder for more attractions -->
+    </section>
+    </article>
+</main>
 
-  <div class="attraction">
-    <h3>Yokohama</h3>
-    <img src="images/yokohama.jpg" alt="Yokohama" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Port city, Minato Mirai, Chinatown, museums, and parks.</p>
-    </details>
-  </div>
-
-  <div class="attraction">
-    <h3>Nagoya</h3>
-    <img src="images/nagoya.jpg" alt="Nagoya" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Castle, museums, Toyota history, and local cuisine.</p>
-    </details>
-  </div>
-
-  <div class="attraction">
-    <h3>Hakone</h3>
-    <img src="images/hakone.jpg" alt="Hakone" class="attraction-image">
-    <details>
-      <summary>More Info</summary>
-      <p>Hot springs, lake views, Mount Fuji views, and museums.</p>
-    </details>
-  </div>
-
-</div>
-
+<footer role="contentinfo">
+    <p>&copy; 2026 Japan Travel Planner</p>
+</footer>
 </body>
 </html>
