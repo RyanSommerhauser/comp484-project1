@@ -13,7 +13,7 @@
   <h2>Japan Trip Budget Calculator</h2>
   <nav role="navigation">
     <ul>
-      <li><a href="attractions.html">Attractions</a></li>
+      <li><a href="cities.html">Cities</a></li>
       <li><a href="budget.html">Trip Budget</a></li>
       <li><a href="travel.html">Travel Planner</a></li>
       <li><a href="phrases.html">Phrases</a></li>
@@ -55,7 +55,11 @@
           Maximum Budget:
           <input type="number" id="budgetMax" placeholder="Enter your budget goal">
         </label>
-
+        <!-- 
+          The form attribute allows this button to be associated with a specific form
+          even if it is styled or positioned separately. This improves layout flexibility
+          while maintaining proper form behavior.
+        -->
         <button type="button" onclick="calculateTotal()">Calculate Total</button>
       </form>
     </section>
@@ -80,8 +84,17 @@
 
       <h3>Calculated Total</h3>
       <p>$<span id="total">0</span></p>
-
+      <!-- 
+        The <progress> element visually represents progress toward a goal.
+        Here, it shows how close the total trip cost is to the user's maximum budget.
+        The value and max are updated dynamically using JavaScript.
+      -->
       <progress id="budgetProgress" value="0" max="100"></progress>
+      <!-- 
+        The value attribute defines the current amount of progress.
+        In this project, it represents the calculated total trip cost
+        relative to the user's budget.
+      -->
     </section>
   </article>
 </main>
